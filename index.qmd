@@ -1,8 +1,125 @@
 ---
-title: "Template Revealjs Quarto site"
-format: revealjs
+title: Why Emacs?
+subtitle: (Why _Not_ Emacs?)
+format:
+  clean-revealjs: default
+author:
+  - name: Neil Shephard
+    orcid: 0000-0001-8301-6857
+    email: n.shephard@sheffield.ac.uk
+    affiliations: RSE, University of Sheffield
+from: markdown+emoji
+date: last-modified
 ---
 
-This is a Quarto website.
+## Emacs
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+### _'Course, there's an Emacs command to do that_
+
+![[XKCD : Real Programmers](https://xkcd.com/378/)](https://imgs.xkcd.com/comics/real_programmers.png)
+
+<!-- ### Some extra things you can do with the clean theme -->
+
+<!-- Special classes for emphasis -->
+
+<!-- - `.alert` class for default emphasis, e.g. [important note]{.alert}. -->
+<!-- - `.fg` class for custom colour, e.g. [important note]{.fg style="--col: #e64173"}. -->
+<!-- - `.bg` class for custom background, e.g. [important note]{.bg style="--col: #e64173"}. -->
+
+<!-- Cross-references -->
+
+<!-- - `.button` class provides a Beamer-like button, e.g. [[Summary]{.button}](#sec-summary) -->
+
+::: {.notes}
+:::
+
+## Content
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+### Covered
+
+* Orgmode
+* Magit
+* Emacs as IDEa
+* RSS Reader
+* Passwords and Encryption
+
+:::
+
+::: {.column width="50%"}
+
+### Not Covered
+
+* [Emacs Lisp](https://www.gnu.org/software/emacs/manual/html_node/elisp/index.html )
+* Configuration
+
+:::
+
+::::
+
+## Orgmode
+
+::: {.notes}
+:::
+
+## Magit
+
+::: {.notes}
+:::
+
+## IDE (Language Server Protocol)
+
+* Foolish not to use IDE
+* Many language specific legacy packages.
+* Modern solution [Language Server Protocol](https://microsoft.github.io/language-server-protocol/)
+* [LSP Mode](https://emacs-lsp.github.io/lsp-mode/) for Emacs supports [lots of languages](https://emacs-lsp.github.io/lsp-mode/page/languages/)
+
+::: {.notes}
+:::
+
+## RSS Reader
+
+::: {.notes}
+:::
+
+## Passwords and Encryption
+
+::: {.notes}
+:::
+
+## Links
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+### Official Pages
+
+* [Emacs](https://www.gnu.org/software/emacs/)
+* [Emacsdocs.org](https://emacsdocs.org/)
+* [LSP Mode](https://emacs-lsp.github.io/lsp-mode/)
+* [Magit](https://magit.vc)
+* [Orgmode](https://orgmode.org)
+* [OrgRoam](https://www.orgroam.com/)
+
+:::
+
+::: {.column width="50%"}
+
+### Useful Resources
+
+* [Emacs StackExchange](https://emacs.stackexchange.com/)
+* [/r/emacs](https://www.reddit.com/r/emacs)
+* [emacs.ch](https://emacs.ch/explore) (Mastodon instance)
+* [SystemCrafters](https://systemcrafters.net/guides/)
+* [My Emacs Config](https://gitlab.com/nshephard/emacs)
+
+:::
+
+::::
+
+::: {.notes}
+:::
