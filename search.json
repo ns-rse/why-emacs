@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "index.html#emacs",
+    "href": "index.html#emacs",
+    "title": "Why Emacs?",
+    "section": "Emacs",
+    "text": "Emacs\n’Course, there’s an Emacs command to do that\n\n\n\n\n\n\n\n\nXKCD : Real Programmers"
+  },
+  {
+    "objectID": "index.html#content",
+    "href": "index.html#content",
+    "title": "Why Emacs?",
+    "section": "Content",
+    "text": "Content\n\n\nCovered\n\nOrgmode\nMagit\nEmacs as IDEa\nRSS Reader\nPasswords and Encryption\n\n\nNot Covered\n\nEmacs Lisp\nConfiguration"
+  },
+  {
+    "objectID": "index.html#orgmode",
+    "href": "index.html#orgmode",
+    "title": "Why Emacs?",
+    "section": "Orgmode",
+    "text": "Orgmode"
+  },
+  {
+    "objectID": "index.html#magit",
+    "href": "index.html#magit",
+    "title": "Why Emacs?",
+    "section": "Magit",
+    "text": "Magit"
+  },
+  {
+    "objectID": "index.html#ide-language-server-protocol",
+    "href": "index.html#ide-language-server-protocol",
+    "title": "Why Emacs?",
+    "section": "IDE (Language Server Protocol)",
+    "text": "IDE (Language Server Protocol)\n\nFoolish not to use IDE\nMany language specific legacy packages.\nModern solution Language Server Protocol\nLSP Mode for Emacs supports lots of languages"
+  },
+  {
+    "objectID": "index.html#rss-reader",
+    "href": "index.html#rss-reader",
+    "title": "Why Emacs?",
+    "section": "RSS Reader",
+    "text": "RSS Reader"
+  },
+  {
+    "objectID": "index.html#passwords-and-encryption",
+    "href": "index.html#passwords-and-encryption",
+    "title": "Why Emacs?",
+    "section": "Passwords and Encryption",
+    "text": "Passwords and Encryption"
+  },
+  {
+    "objectID": "index.html#links",
+    "href": "index.html#links",
+    "title": "Why Emacs?",
+    "section": "Links",
+    "text": "Links\n\n\nOfficial Pages\n\nEmacs\nEmacsdocs.org\nLSP Mode\nMagit\nOrgmode\nOrgRoam\n\n\nUseful Resources\n\nEmacs StackExchange\n/r/emacs\nemacs.ch (Mastodon instance)\nSystemCrafters\nMy Emacs Config"
+  }
+]
