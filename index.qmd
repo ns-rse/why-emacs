@@ -44,7 +44,7 @@ date: last-modified
 * Orgmode
 * Magit
 * Emacs as IDE
-* RSS Reader
+* TRAMP
 * Passwords and Encryption
 
 :::
@@ -81,15 +81,59 @@ date: last-modified
 ::: {.notes}
 :::
 
-## RSS Reader
+
+## Passwords
+
+* [pass](https://www.passwordstore.org) the standard password manager.
+* Keys are GPG encrypted in `~/.password-store`
+* Use [pass](https://github.com/NicolasPetton/pass) package to access keys from Emacs.
+* Bound to `F1`
 
 ::: {.notes}
+I use `pass` the standard password manager which uses GPG to encrypt passwords and other information simple text
+files. There is an Emacs package for interfacing to the command line utility and I've bound it to the key `F1`. I have
+my GPG key linked to my Yubikey so I typically have to have the Yubikey plugged in for this to work, but I've configured
+and bound the Emacs package to `F1` so all I need to do access my passwords is press that (`F1`), if they key isn't
+inserted I'm prompted to do so and then I have to unlock my GPG key. Once that is done Emacs copies the password to the
+clipboard and I can paste it into a website within 45 seconds before it is scrubbed from the clipboard.
 :::
 
-## Passwords and Encryption
+## Encryption
+
+* Easy to encrypt/decrypt files from Emacs.
+* Just save a file with `.gpg` extension.
+* Prompted for key to encrypt with.
+* Opening simple, just open the file, you are prompted for decryption key.
 
 ::: {.notes}
+As you've just seen Emacs can work with GPG encrypted files and its really easy to do so, just save a file with the
+`.gpg` extension and you are prompted for which key to encrypt the file with. When you want to open it you just open it
+like any other file and if your key isn't currently unlocked you're prompted to do so.
 :::
+
+## TRAMP
+
+* **T**ransparent **R**emote **A**cess, **M**ultiple **P**rotocols
+* Open files over SSH as if local files.
+
+```{bash}
+# Open file as root
+/su::/etc/group
+# Open remote file encrypted with GPG
+/ssh:neil@alarmpi-4b:~/org/holidays/2023/slovenia_2023.org.gpg
+```
+::: {.notes}
+
+TRAMP which stands for Transparent Remote Access Multiple Protocols provides a fairly seamless way to open and edit
+files on remote systems, or as `root` user which saves you having to `su` into `root` or switch to a terminal and use
+`sudo`. Typically files are opened over `ssh` but as the name suggests other protocols are supported.
+
+It works by using flags/switches to indicate the protocol to be used for opening the file and so if I wanted to open the
+`/etc/group` file and modify who is in what groups I use `/su::/etc/group`. If I want to open a GPG encrypted file on a
+remote system, in this case one of my Raspebrry Pi's then I instead use `/ssh` as the first switch, give the username
+and hostname and then the path to the file I want to open. It will be
+:::
+
 
 ## Links
 
