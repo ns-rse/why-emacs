@@ -43,7 +43,7 @@ date: last-modified
 
 * Orgmode
 * Magit
-* Emacs as IDEa
+* Emacs as IDE
 * RSS Reader
 * Passwords and Encryption
 
@@ -62,6 +62,7 @@ date: last-modified
 
 ## Orgmode
 
+* [Orgmode](https://orgmode.org) plain text file format
 ::: {.notes}
 :::
 
@@ -102,7 +103,7 @@ date: last-modified
 * [Emacsdocs.org](https://emacsdocs.org/)
 * [LSP Mode](https://emacs-lsp.github.io/lsp-mode/)
 * [Magit](https://magit.vc)
-* [Orgmode](https://orgmode.org)
+* [Orgmode](https://orgmode.org) ([World of Org](https://orgmode.org/worg/))
 * [OrgRoam](https://www.orgroam.com/)
 
 :::
