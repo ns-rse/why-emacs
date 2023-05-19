@@ -1,6 +1,6 @@
 ---
 title: Why Emacs?
-subtitle: (Why _Not_ Emacs?)
+subtitle: (Why _Not_?)
 format:
   clean-revealjs: default
 author:
@@ -55,6 +55,8 @@ date: last-modified
 
 * [Emacs Lisp](https://www.gnu.org/software/emacs/manual/html_node/elisp/index.html )
 * Configuration
+* Dired (File manager)
+* 1000's of other packages!
 
 :::
 
@@ -62,11 +64,19 @@ date: last-modified
 
 ## Orgmode
 
-* [Orgmode](https://orgmode.org) plain text file format
+* [Orgmode](https://orgmode.org) plain text file format.
+* Literate programming
+* Task Management/Agenda
+* Log time against tasks.
+
 ::: {.notes}
 :::
 
 ## Magit
+
+* Git porcelain
+* Key driven
+* Holds your hand.
 
 ::: {.notes}
 :::
