@@ -12,9 +12,9 @@ from: markdown+emoji
 date: last-modified
 ---
 
-## Emacs
+## _'Course, there's an Emacs command to do that_
 
-### _'Course, there's an Emacs command to do that_
+### (_or package_)
 
 ![[XKCD : Real Programmers](https://xkcd.com/378/)](https://imgs.xkcd.com/comics/real_programmers.png)
 
@@ -53,11 +53,11 @@ date: last-modified
 
 ### Not Covered
 
-* [Emacs Lisp](https://www.gnu.org/software/emacs/manual/html_node/elisp/index.html )
+* [Emacs Lisp](https://www.gnu.org/software/emacs/manual/html_node/elisp/index.html)
 * Configuration
 * Dired (File manager)
 * 1000's of other packages!
-
+* Much, much more
 :::
 
 ::::
@@ -65,20 +65,83 @@ date: last-modified
 ## Orgmode
 
 * [Orgmode](https://orgmode.org) plain text file format.
-* Literate programming
-* Task Management/Agenda
-* Log time against tasks.
+* Literate programming ([Org-Babel](https://orgmode.org/worg/org-contrib/babel/intro.html))
+* Task Management/Agenda/Logging time
+  * [Org-Capture](https://orgmode.org/manual/Capture.html)
+  * [Org-Agenda](https://orgmode.org/manual/Agenda-Views.html)
+  * [GTD](https://github.com/Trevoke/org-gtd.el)
+* [Zettelkasten](https://zettelkasten.de/introduction/) via [OrgRoam](https://www.orgroam.com/)
 
 ::: {.notes}
+Orgmode is a plain text file format, its essentially a markup language, but there is so much more to it. It allows
+literate programming via [Org-Babel](https://orgmode.org/worg/org-contrib/babel/intro.html). Some may be familiar with
+Quarto which came out last year and allows users to write literate documents using R, Python, Julia and Observable, but
+Org-babel supports these and more, pretty much any language Emacs supports can be embedded in a chunk and evaluated when
+the document compiles, including C.
+
+As an example I have a document where I capture the running, cycling and other physical activities I do written in
+Org-mode. If I want to capture a new run I use a template that I've created and am prompted for details, once entered I
+save this and the information is added to the log file in an org table. There are code chunks for reading these tables
+into R and doing some data cleaning and these are then used to produce summary tables and charts which I host on my
+Virtual Private Server.
+
+Org-mode also provides a system for task management to capture ToDo tasks quickly and efficiently, review agendas and
+log time against tasks.
+
+If I want to add a task to my RSE ToDo list I use another template I've set up to do so and this is captures along to
+file, I can include a `SCHEDULED:` or `DEADLINE:` field too. There are more sophisticated frameworks for this such as
+the [GetThingsDone](https://github.com/Trevoke/org-gtd.el) framework which I won't go into here.
+
+But once you have captured a number of tasks to do across different files it may sound like a recipe for disaster to
+keep track of them, but not so, [Org-Agenda](https://orgmode.org/manual/Agenda-Views.html) allows you to pull all of
+this together into a weekly view of what tasks need doing. Once configured with which files to look
+at its simply `C-c a` and you're prompted for the view you want to take on your tasks.
+
+Another useful feature of Org is using [OrgRoam](https://www.orgroam.com/) as a personal knowledge management
+system. Its an electronic version of the [Zettelkasten](https://zettelkasten.de/introduction/) method whereby notes have
+unique identifiers and are linked to other notes. If I want to look at my notes on say Git its `C-c n f` and I'm
+prompted for the note I want to look at, enter `Git` and the notes come up. There are links within to other notes which
+can be navigated (`C-c o` when cursor is over). There is [org-roam-ui](https://github.com/org-roam/org-roam-ui) which
+spins up a web server and allows visualisation of your notes.
+
+Emacs and Orgmode also have many packages available which allow tight integration with BibTeX citations, but since I
+don't actually write many papers these days I've not got too familiar with that aspect.
 :::
 
 ## Magit
 
-* Git porcelain
+* [Magit](https://magit.vc/) is a Git porcelain.
 * Key driven
-* Holds your hand.
+* Holds your hand and teaches you Git commands
+* Create, edit, update issues/pull-requests ([Forge](https://magit.vc/manual/forge.html))
 
 ::: {.notes}
+We all use and love Git and many of you no doubt use the IDE integration to manage it, Emacs is no different but I find
+the way its implemented really intuitive and helpful. It uses transient buffers with key-bindings to actions to perform
+git actions. From any version controlled file `C-x g` brings up Magit, you have a view on what is untracked, unstaged,
+staged, commit history, from there you can perform various tasks with single keys, saving key-strokes that would require
+typing at the command line or if you've already tired of that defining and memorising endless aliases.
+
+But with keystrokes you develop muscle memory, so half the time I don't even think about what keys I'm pressing it
+becomes intuitive.
+
+I can Stage files and review what has changed, within the buffer, if I want to remove a change its a single press of `k`
+on the file name and I'm prompted whether I want to undo that files changes, better still is the ability for that to be
+narrowed to specific chunks. Staged files can be committed with `c` and we can chose whether its a plain commit, ammend,
+reword and so forth.
+
+If you want to [Bisect](https://magit.vc/manual/forge.html) its `B` and you're given options, if not in progress you're
+prompted for your good and bad commits (which you could have copy and pasted from the log history). Its `g` for good and
+`b` for bad and when done `r` to return to the original `HEAD`.
+
+You can also pull down the repositories Issues and Pull requests using Forge and these can be edited, closed, commented
+on, new tasks created which I won't go into there. One thing I find useful though is to take an issue and copy a link to
+its details and add it into my burgeoning ToDo lists with the Org-capture templates. This makes it easy to navigate from
+a short summary of the task at hand to the detailed information required to get working.
+
+Thus each of these tools, Org-mode task capturing and agendas, and Magit are useful in their own right but when brought
+together and integrated more closely it improves your workflow in theory making you more productive at navigating the
+tasks you have to work on.
 :::
 
 ## IDE (Language Server Protocol)
@@ -89,6 +152,29 @@ date: last-modified
 * [LSP Mode](https://emacs-lsp.github.io/lsp-mode/) for Emacs supports [lots of languages](https://emacs-lsp.github.io/lsp-mode/page/languages/)
 
 ::: {.notes}
+This goes further because Emacs can be used as an IDE, there used to be many legacy packages for each language, but
+these days Language Server Protocols are leveraged to provide support for any language that has an LSP. There are two
+many packages for this [LSP Mode](https://emacs-lsp.github.io/lsp-mode/) and
+[Eglot](https://joaotavora.github.io/eglot/). The later will be included in the forthcoming Emacs 29.1 but requires more
+manual installation of language servers. LSP mode will for some languages handle the installation of the language server
+for you.
+
+You can relatively easily configure the features of the LSP to your liking and I can show you some of the features for
+Python development I use.
+
+First thing is to activate a virtual environment I store these globally rather than on a per-project basis and having
+that loaded by default as I sometimes have more than one environment for a given project but activating one is easy with
+the key-binding I've setup  `C-c p v` and type in the environment I want. Open a `.py` file and we get prompts for what
+each function is, can navigate code with a click of a button. Want to rename variables across the code base and its `C-c
+l r r` and I'm prompted for what I want to change the name to.
+
+Write a new function and you should include a docstring, the [numpydoc](https://github.com/douglasdavis/numpydoc.el)
+Emacs package makes that easy, it has the `numpydoc-gen` function which I've bound to `C-c p n` and off we go, I'm
+prompted for the fields to be completed.
+
+Have an issue with a file that you want to capture a ToDo task for? Well with the template configured to include `%a` a
+link to the file from which the template was invoked is included automatically. Another example of how these tools
+integrate well.
 :::
 
 
@@ -98,6 +184,8 @@ date: last-modified
 * Keys are GPG encrypted in `~/.password-store`
 * Use [pass](https://github.com/NicolasPetton/pass) package to access keys from Emacs.
 * Bound to `F1`
+
+
 
 ::: {.notes}
 I use `pass` the standard password manager which uses GPG to encrypt passwords and other information simple text
@@ -115,6 +203,12 @@ clipboard and I can paste it into a website within 45 seconds before it is scrub
 * Prompted for key to encrypt with.
 * Opening simple, just open the file, you are prompted for decryption key.
 
+* [pass](https://www.passwordstore.org/) uses GPG encryption to store passwords.
+* Access passwords with a single key-binding.
+* Linked to Yubikey, prompted for password (if not already unlocked).
+* Easy to encrypt text files to GPG, just save with `.gpg`.
+* Opening `.gpg` files simple if GPG key unlocked with Yubikey.
+
 ::: {.notes}
 As you've just seen Emacs can work with GPG encrypted files and its really easy to do so, just save a file with the
 `.gpg` extension and you are prompted for which key to encrypt the file with. When you want to open it you just open it
@@ -125,6 +219,8 @@ like any other file and if your key isn't currently unlocked you're prompted to 
 
 * **T**ransparent **R**emote **A**cess, **M**ultiple **P**rotocols
 * Open files over SSH as if local files.
+* Open files as `root` - no `su` / `sudo nano`
+
 
 ```{bash}
 # Open file as root
@@ -144,6 +240,50 @@ remote system, in this case one of my Raspebrry Pi's then I instead use `/ssh` a
 and hostname and then the path to the file I want to open. It will be
 :::
 
+
+## Emacs **is** an operating system
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+### Pros
+
+* There **is** a package for almost everything.
+* If not, write one.
+* Highly customise-able.
+* Supportive community.
+
+
+:::
+
+::: {.column width="50%"}
+
+### Cons
+
+* Learning curve.
+* Overwhelming.
+* Learn some basic Emacs LISP.
+* Rabbit holes.
+
+:::
+
+::::
+
+::: {.notes}
+There are pros and cons to everything, there is a package for almost everything, if not you can (potentially) write
+one. It gives you a highly customised environment that works they way you want it to, but wait for the con, and there is
+a highly supportive community.
+
+On the flip side there is a big learning curve and that can be overwhelming, particularly as you need to learn some
+basic Emacs LISP to get going. But I prefer to view it as lots of small hills to overcome, I never set out to do half
+the things I use Emacs for, I just wanted something to write Stata scripts in other than their GUI and there was [Emacs
+Speaks Statistics](https://ess.r-project.org/) which I still use to this day for working with R code rather than
+RStudio.
+
+Perhaps the biggest hazard is that of the rabbit holes you can fall down customising things, but you just need discipline
+to keep that in check.
+:::
 
 ## Links
 
