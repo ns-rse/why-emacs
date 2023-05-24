@@ -26,17 +26,11 @@ jobs:
 
       - name: Install Python Dependencies
         run: |
-          pip3 install jupyter nbformat
-
-      - name: Render Slides
-        uses: quarto-dev/quarto-actions/render@v2.1.2
-        with:
-          to: website
+          pip3 install jupyter
 
       - name: Publish to GitHub Pages
         uses: quarto-dev/quarto-actions/publish@v2.1.2
         with:
           target: gh-pages
-          render: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # this secret is always available for github actions
