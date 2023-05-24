@@ -27,7 +27,7 @@ jobs:
       # add software dependencies here
 
       - name: Publish to GitHub Pages (and render)
-        uses: quarto-dev/quarto-actions/publish@v2
+        uses: quarto-dev/quarto-actions/publish@v2.1.2
         with:
           target: gh-pages
         env:
