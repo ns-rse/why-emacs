@@ -1,58 +1,86 @@
 [
   {
-    "objectID": "index.html#emacs",
-    "href": "index.html#emacs",
+    "objectID": "index.html",
+    "href": "index.html",
     "title": "Why Emacs?",
-    "section": "Emacs",
-    "text": "Emacs\n’Course, there’s an Emacs command to do that\n\n\n\n\n\n\n\n\nXKCD : Real Programmers"
+    "section": "",
+    "text": "XKCD : Real Programmers"
+  },
+  {
+    "objectID": "index.html#course-theres-an-emacs-command-to-do-that",
+    "href": "index.html#course-theres-an-emacs-command-to-do-that",
+    "title": "Why Emacs?",
+    "section": "",
+    "text": "XKCD : Real Programmers"
   },
   {
     "objectID": "index.html#content",
     "href": "index.html#content",
     "title": "Why Emacs?",
     "section": "Content",
-    "text": "Content\n\n\nCovered\n\nOrgmode\nMagit\nEmacs as IDEa\nRSS Reader\nPasswords and Encryption\n\n\nNot Covered\n\nEmacs Lisp\nConfiguration"
+    "text": "Content\n\n\n\nCovered\n\nOrgmode\nMagit\nEmacs as IDE\nTRAMP\nPasswords and Encryption\n\n\n\n\nNot Covered\n\nEmacs Lisp\nConfiguration\nDired (File manager)\n1000’s of other packages!\nMuch, much more"
   },
   {
     "objectID": "index.html#orgmode",
     "href": "index.html#orgmode",
     "title": "Why Emacs?",
     "section": "Orgmode",
-    "text": "Orgmode"
+    "text": "Orgmode\n\nOrgmode plain text file format.\nLiterate programming (Org-Babel)\nTask Management/Agenda/Logging time\n\nOrg-Capture\nOrg-Agenda\nGTD\n\nZettelkasten via OrgRoam\n\n\nOrgmode is a plain text file format, its essentially a markup language, but there is so much more to it. It allows literate programming via Org-Babel. Some may be familiar with Quarto which came out last year and allows users to write literate documents using R, Python, Julia and Observable, but Org-babel supports these and more, pretty much any language Emacs supports can be embedded in a chunk and evaluated when the document compiles, including C.\nAs an example I have a document where I capture the running, cycling and other physical activities I do written in Org-mode. If I want to capture a new run I use a template that I’ve created and am prompted for details, once entered I save this and the information is added to the log file in an org table. There are code chunks for reading these tables into R and doing some data cleaning and these are then used to produce summary tables and charts which I host on my Virtual Private Server.\nOrg-mode also provides a system for task management to capture ToDo tasks quickly and efficiently, review agendas and log time against tasks.\nIf I want to add a task to my RSE ToDo list I use another template I’ve set up to do so and this is captures along to file, I can include a SCHEDULED: or DEADLINE: field too. There are more sophisticated frameworks for this such as the GetThingsDone framework which I won’t go into here.\nBut once you have captured a number of tasks to do across different files it may sound like a recipe for disaster to keep track of them, but not so, Org-Agenda allows you to pull all of this together into a weekly view of what tasks need doing. Once configured with which files to look at its simply C-c a and you’re prompted for the view you want to take on your tasks.\nAnother useful feature of Org is using OrgRoam as a personal knowledge management system. Its an electronic version of the Zettelkasten method whereby notes have unique identifiers and are linked to other notes. If I want to look at my notes on say Git its C-c n f and I’m prompted for the note I want to look at, enter Git and the notes come up. There are links within to other notes which can be navigated (C-c o when cursor is over). There is org-roam-ui which spins up a web server and allows visualisation of your notes.\nEmacs and Orgmode also have many packages available which allow tight integration with BibTeX citations, but since I don’t actually write many papers these days I’ve not got too familiar with that aspect."
   },
   {
     "objectID": "index.html#magit",
     "href": "index.html#magit",
     "title": "Why Emacs?",
     "section": "Magit",
-    "text": "Magit"
+    "text": "Magit\n\nMagit is a Git porcelain.\nKey driven\nHolds your hand and teaches you Git commands\nCreate, edit, update issues/pull-requests (Forge)\n\n\nWe all use and love Git and many of you no doubt use the IDE integration to manage it, Emacs is no different but I find the way its implemented really intuitive and helpful. It uses transient buffers with key-bindings to actions to perform git actions. From any version controlled file C-x g brings up Magit, you have a view on what is untracked, unstaged, staged, commit history, from there you can perform various tasks with single keys, saving key-strokes that would require typing at the command line or if you’ve already tired of that defining and memorising endless aliases.\nBut with keystrokes you develop muscle memory, so half the time I don’t even think about what keys I’m pressing it becomes intuitive.\nI can Stage files and review what has changed, within the buffer, if I want to remove a change its a single press of k on the file name and I’m prompted whether I want to undo that files changes, better still is the ability for that to be narrowed to specific chunks. Staged files can be committed with c and we can chose whether its a plain commit, ammend, reword and so forth.\nIf you want to Bisect its B and you’re given options, if not in progress you’re prompted for your good and bad commits (which you could have copy and pasted from the log history). Its g for good and b for bad and when done r to return to the original HEAD.\nYou can also pull down the repositories Issues and Pull requests using Forge and these can be edited, closed, commented on, new tasks created which I won’t go into there. One thing I find useful though is to take an issue and copy a link to its details and add it into my burgeoning ToDo lists with the Org-capture templates. This makes it easy to navigate from a short summary of the task at hand to the detailed information required to get working.\nThus each of these tools, Org-mode task capturing and agendas, and Magit are useful in their own right but when brought together and integrated more closely it improves your workflow in theory making you more productive at navigating the tasks you have to work on."
   },
   {
     "objectID": "index.html#ide-language-server-protocol",
     "href": "index.html#ide-language-server-protocol",
     "title": "Why Emacs?",
     "section": "IDE (Language Server Protocol)",
-    "text": "IDE (Language Server Protocol)\n\nFoolish not to use IDE\nMany language specific legacy packages.\nModern solution Language Server Protocol\nLSP Mode for Emacs supports lots of languages"
+    "text": "IDE (Language Server Protocol)\n\nFoolish not to use IDE\nMany language specific legacy packages.\nModern solution Language Server Protocol\nLSP Mode for Emacs supports lots of languages\n\n\nThis goes further because Emacs can be used as an IDE, there used to be many legacy packages for each language, but these days Language Server Protocols are leveraged to provide support for any language that has an LSP. There are two many packages for this LSP Mode and Eglot. The later will be included in the forthcoming Emacs 29.1 but requires more manual installation of language servers. LSP mode will for some languages handle the installation of the language server for you.\nYou can relatively easily configure the features of the LSP to your liking and I can show you some of the features for Python development I use.\nFirst thing is to activate a virtual environment I store these globally rather than on a per-project basis and having that loaded by default as I sometimes have more than one environment for a given project but activating one is easy with the key-binding I’ve setup C-c p v and type in the environment I want. Open a .py file and we get prompts for what each function is, can navigate code with a click of a button. Want to rename variables across the code base and its C-c l r r and I’m prompted for what I want to change the name to.\nWrite a new function and you should include a docstring, the numpydoc Emacs package makes that easy, it has the numpydoc-gen function which I’ve bound to C-c p n and off we go, I’m prompted for the fields to be completed.\nHave an issue with a file that you want to capture a ToDo task for? Well with the template configured to include %a a link to the file from which the template was invoked is included automatically. Another example of how these tools integrate well."
   },
   {
-    "objectID": "index.html#rss-reader",
-    "href": "index.html#rss-reader",
+    "objectID": "index.html#encryption",
+    "href": "index.html#encryption",
     "title": "Why Emacs?",
-    "section": "RSS Reader",
-    "text": "RSS Reader"
+    "section": "Encryption",
+    "text": "Encryption\n\nEasy to encrypt/decrypt files from Emacs.\nJust save a file with .gpg extension.\nPrompted for key to encrypt with.\nOpening simple, just open the file, you are prompted for decryption key.\n\n\nAs you’ve just seen Emacs can work with GPG encrypted files and its really easy to do so, just save a file with the .gpg extension and you are prompted for which key to encrypt the file with. When you want to open it you just open it like any other file and if your key isn’t currently unlocked you’re prompted to do so."
   },
   {
-    "objectID": "index.html#passwords-and-encryption",
-    "href": "index.html#passwords-and-encryption",
+    "objectID": "index.html#passwords",
+    "href": "index.html#passwords",
     "title": "Why Emacs?",
-    "section": "Passwords and Encryption",
-    "text": "Passwords and Encryption"
+    "section": "Passwords",
+    "text": "Passwords\n\npass the standard password manager.\nKeys are GPG encrypted in ~/.password-store\nUse pass package to access keys from Emacs.\nBound to F1\n\n\nI use pass the standard password manager which uses GPG to encrypt passwords and other information simple text files. There is an Emacs package for interfacing to the command line utility and I’ve bound it to the key F1. I have my GPG key linked to my Yubikey so I typically have to have the Yubikey plugged in for this to work, but I’ve configured and bound the Emacs package to F1 so all I need to do access my passwords is press that (F1), if they key isn’t inserted I’m prompted to do so and then I have to unlock my GPG key. Once that is done Emacs copies the password to the clipboard and I can paste it into a website within 45 seconds before it is scrubbed from the clipboard."
+  },
+  {
+    "objectID": "index.html#tramp",
+    "href": "index.html#tramp",
+    "title": "Why Emacs?",
+    "section": "TRAMP",
+    "text": "TRAMP\n\nTransparent Remote Acess, Multiple Protocols\nOpen files over SSH as if local files.\nOpen files as root - no su / sudo nano\n\n# Open file as root\n/su::/etc/group\n# Open remote file encrypted with GPG\n/ssh:neil@alarmpi-4b:~/org/holidays/2023/slovenia_2023.org.gpg\n\nTRAMP which stands for Transparent Remote Access Multiple Protocols provides a fairly seamless way to open and edit files on remote systems, or as root user which saves you having to su into root or switch to a terminal and use sudo. Typically files are opened over ssh but as the name suggests other protocols are supported.\nIt works by using flags/switches to indicate the protocol to be used for opening the file and so if I wanted to open the /etc/group file and modify who is in what groups I use /su::/etc/group. If I want to open a GPG encrypted file on a remote system, in this case one of my Raspebrry Pi’s then I instead use /ssh as the first switch, give the username and hostname and then the path to the file I want to open. It will be"
+  },
+  {
+    "objectID": "index.html#other-useful-things",
+    "href": "index.html#other-useful-things",
+    "title": "Why Emacs?",
+    "section": "Other useful things",
+    "text": "Other useful things\n\nDired file manager (exposition).\nebib BibTeX citation manager.\nvterm one of many terminal emulators/shells."
+  },
+  {
+    "objectID": "index.html#emacs-is-an-operating-system",
+    "href": "index.html#emacs-is-an-operating-system",
+    "title": "Why Emacs?",
+    "section": "Emacs is an operating system",
+    "text": "Emacs is an operating system\n\n\n\nPros\n\nThere is a package for almost everything.\nIf not, write one.\nHighly customise-able (Emacs LISP).\nTools work together\nSupportive community.\n\n\n\n\nCons\n\nLearning curve.\nOverwhelming.\nLearn some basic Emacs LISP.\n🐰 holes.\n\n\n\n\n\nThere are pros and cons to everything, there is a package for almost everything, if not you can (potentially) write one. It gives you a highly customised environment that works they way you want it to, as I hope to have demonstrated its how the individual tools work together to improve and smooth the workflow you’re not switching between one window for your IDE, another for management, another for making notes, another for logging ToDo tasks and time spent on each task and there is a great, supportive community out there.\nOn the flip side there is a big learning curve and that can be overwhelming, particularly as you need to learn some basic Emacs LISP to get going. But I prefer to view it as lots of small hills to overcome, I never set out to do half the things I use Emacs for, I just wanted something to write Stata scripts in other than their GUI and there was Emacs Speaks Statistics which I still use to this day for working with R code rather than RStudio.\nPerhaps the biggest hazard is that of the rabbit holes you can fall down customising things, but you just need discipline to keep that in check."
   },
   {
     "objectID": "index.html#links",
     "href": "index.html#links",
     "title": "Why Emacs?",
     "section": "Links",
-    "text": "Links\n\n\nOfficial Pages\n\nEmacs\nEmacsdocs.org\nLSP Mode\nMagit\nOrgmode\nOrgRoam\n\n\nUseful Resources\n\nEmacs StackExchange\n/r/emacs\nemacs.ch (Mastodon instance)\nSystemCrafters\nMy Emacs Config"
+    "text": "Links\n\n\n\nOfficial Pages\n\nEmacs\nEmacsdocs.org\nLSP Mode\nMagit\nOrgmode\nOrgRoam\nWorld of Org\n\n\n\n\nUseful Resources\n\nEmacs StackExchange\n/r/emacs\nemacs.ch (Mastodon instance)\n\n\n\n\nAdvocacy\n\nSystemCrafters\nProtesilaos Stavrou\nMastering Emacs\nLucid Manager - Emacs\nMy Emacs Config\n\n\n\n\n\nThere are tons of resources out there for learning Emacs, I’ve listed here some of the official documentation for some of the packages I’ve covered today and a bunch of useful resources for when you’re scratching your head such as the Emacs StackExchange and /r/emacs. If you use Mastodon there is the emacs.ch server and you’ll find if you tag questions with #emacs you get a lot of useful responses.\nI’ve also listed a number of advocacy resources that demonstrate how to do various things in Emacs and last of all is a link to my Emacs configuration repository. I borrow and use others configuration examples all the time and its a great way of learning."
   }
 ]
