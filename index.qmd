@@ -178,6 +178,20 @@ integrate well.
 :::
 
 
+## Encryption
+
+* Easy to encrypt/decrypt files from Emacs.
+* Just save a file with `.gpg` extension.
+* Prompted for key to encrypt with.
+* Opening simple, just open the file, you are prompted for decryption key.
+
+::: {.notes}
+As you've just seen Emacs can work with GPG encrypted files and its really easy to do so, just save a file with the
+`.gpg` extension and you are prompted for which key to encrypt the file with. When you want to open it you just open it
+like any other file and if your key isn't currently unlocked you're prompted to do so.
+:::
+
+
 ## Passwords
 
 * [pass](https://www.passwordstore.org) the standard password manager.
@@ -196,24 +210,6 @@ inserted I'm prompted to do so and then I have to unlock my GPG key. Once that i
 clipboard and I can paste it into a website within 45 seconds before it is scrubbed from the clipboard.
 :::
 
-## Encryption
-
-* Easy to encrypt/decrypt files from Emacs.
-* Just save a file with `.gpg` extension.
-* Prompted for key to encrypt with.
-* Opening simple, just open the file, you are prompted for decryption key.
-
-* [pass](https://www.passwordstore.org/) uses GPG encryption to store passwords.
-* Access passwords with a single key-binding.
-* Linked to Yubikey, prompted for password (if not already unlocked).
-* Easy to encrypt text files to GPG, just save with `.gpg`.
-* Opening `.gpg` files simple if GPG key unlocked with Yubikey.
-
-::: {.notes}
-As you've just seen Emacs can work with GPG encrypted files and its really easy to do so, just save a file with the
-`.gpg` extension and you are prompted for which key to encrypt the file with. When you want to open it you just open it
-like any other file and if your key isn't currently unlocked you're prompted to do so.
-:::
 
 ## TRAMP
 
@@ -240,8 +236,14 @@ remote system, in this case one of my Raspebrry Pi's then I instead use `/ssh` a
 and hostname and then the path to the file I want to open. It will be
 :::
 
+## Other useful things
 
-## Emacs **is** an operating system
+* [Dired](https://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html) file manager ([exposition](https://www.youtube.com/watch?v=h6ZssDbEt4A)).
+* [ebib](http://joostkremers.github.io/ebib/) BibTeX citation manager.
+* [vterm](https://github.com/akermu/emacs-libvterm) one of many terminal emulators/shells.
+
+
+## Emacs is an operating system
 
 :::: {.columns}
 
@@ -251,7 +253,8 @@ and hostname and then the path to the file I want to open. It will be
 
 * There **is** a package for almost everything.
 * If not, write one.
-* Highly customise-able.
+* Highly customise-able (Emacs LISP).
+* Tools work together
 * Supportive community.
 
 
@@ -264,7 +267,7 @@ and hostname and then the path to the file I want to open. It will be
 * Learning curve.
 * Overwhelming.
 * Learn some basic Emacs LISP.
-* Rabbit holes.
+* :rabbit:  holes.
 
 :::
 
@@ -272,8 +275,10 @@ and hostname and then the path to the file I want to open. It will be
 
 ::: {.notes}
 There are pros and cons to everything, there is a package for almost everything, if not you can (potentially) write
-one. It gives you a highly customised environment that works they way you want it to, but wait for the con, and there is
-a highly supportive community.
+one. It gives you a highly customised environment that works they way you want it to, as I hope to have demonstrated its
+how the individual tools work together to improve and smooth the workflow you're not switching between one window for
+your IDE, another for management, another for making notes, another for logging ToDo tasks and time spent on each task
+and there is a great, supportive community out there.
 
 On the flip side there is a big learning curve and that can be overwhelming, particularly as you need to learn some
 basic Emacs LISP to get going. But I prefer to view it as lots of small hills to overcome, I never set out to do half
@@ -289,7 +294,7 @@ to keep that in check.
 
 :::: {.columns}
 
-::: {.column width="50%"}
+::: {.column width="33%"}
 
 ### Official Pages
 
@@ -297,24 +302,45 @@ to keep that in check.
 * [Emacsdocs.org](https://emacsdocs.org/)
 * [LSP Mode](https://emacs-lsp.github.io/lsp-mode/)
 * [Magit](https://magit.vc)
-* [Orgmode](https://orgmode.org) ([World of Org](https://orgmode.org/worg/))
+* [Orgmode](https://orgmode.org)
 * [OrgRoam](https://www.orgroam.com/)
+* [World of Org](https://orgmode.org/worg/)
 
 :::
 
-::: {.column width="50%"}
+::: {.column width="33%"}
 
 ### Useful Resources
 
 * [Emacs StackExchange](https://emacs.stackexchange.com/)
 * [/r/emacs](https://www.reddit.com/r/emacs)
 * [emacs.ch](https://emacs.ch/explore) (Mastodon instance)
+
+:::
+
+::: {.column width="33%"}
+
+### Advocacy
+
 * [SystemCrafters](https://systemcrafters.net/guides/)
+* [Protesilaos Stavrou](https://protesilaos.com/emacs/)
+* [Mastering Emacs](https://www.masteringemacs.org/)
+* [Lucid Manager - Emacs](https://lucidmanager.org/productivity/)
 * [My Emacs Config](https://gitlab.com/nshephard/emacs)
+
 
 :::
 
 ::::
 
 ::: {.notes}
+There are tons of resources out there for learning Emacs, I've listed here some of the official documentation for some
+of the packages I've covered today and a bunch of useful resources for when you're scratching your head such as the
+[Emacs StackExchange](https://emacs.stackexchange.com/) and [/r/emacs](https://www.reddit.com/r/emacs). If you use
+Mastodon there is the [emacs.ch](https://emacs.ch/explore) server and you'll find if you tag questions with #emacs you
+get a lot of useful responses.
+
+I've also listed a number of advocacy resources that demonstrate how to do various things in Emacs and last of all is a
+link to my Emacs configuration repository. I borrow and use others configuration examples all the time and its a great
+way of learning.
 :::
