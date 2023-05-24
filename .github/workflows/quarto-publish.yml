@@ -24,6 +24,10 @@ jobs:
           quarto install --no-prompt extension jmbuhr/quarto-qrcode
           quarto install --no-prompt extension grantmcdermott/quarto-revealjs-clean
 
+      - name: Install Python Dependencies
+        run: |
+          pip3 install jupyter nbformat
+
       # add software dependencies here
 
       - name: Publish to GitHub Pages (and render)
