@@ -1,24 +1,17 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Why Emacs?",
-    "section": "",
-    "text": "XKCD : Real Programmers"
-  },
-  {
     "objectID": "index.html#course-theres-an-emacs-command-to-do-that",
     "href": "index.html#course-theres-an-emacs-command-to-do-that",
     "title": "Why Emacs?",
-    "section": "",
-    "text": "XKCD : Real Programmers"
+    "section": "’Course, there’s an Emacs command to do that",
+    "text": "’Course, there’s an Emacs command to do that\n(or package)\n\n\n\n\n\n\n\n\nXKCD : Real Programmers"
   },
   {
     "objectID": "index.html#content",
     "href": "index.html#content",
     "title": "Why Emacs?",
     "section": "Content",
-    "text": "Content\n\n\n\nCovered\n\nOrgmode\nMagit\nEmacs as IDE\nTRAMP\nPasswords and Encryption\n\n\n\n\nNot Covered\n\nEmacs Lisp\nConfiguration\nDired (File manager)\n1000’s of other packages!\nMuch, much more"
+    "text": "Content\n\n\nCovered\n\nOrgmode\nMagit\nEmacs as IDE\nTRAMP\nPasswords and Encryption\n\n\nNot Covered\n\nEmacs Lisp\nConfiguration\nDired (File manager)\n1000’s of other packages!\nMuch, much more"
   },
   {
     "objectID": "index.html#orgmode",
@@ -74,13 +67,13 @@
     "href": "index.html#emacs-is-an-operating-system",
     "title": "Why Emacs?",
     "section": "Emacs is an operating system",
-    "text": "Emacs is an operating system\n\n\n\nPros\n\nThere is a package for almost everything.\nIf not, write one.\nHighly customise-able (Emacs LISP).\nTools work together\nSupportive community.\n\n\n\n\nCons\n\nLearning curve.\nOverwhelming.\nLearn some basic Emacs LISP.\n🐰 holes.\n\n\n\n\n\nThere are pros and cons to everything, there is a package for almost everything, if not you can (potentially) write one. It gives you a highly customised environment that works they way you want it to, as I hope to have demonstrated its how the individual tools work together to improve and smooth the workflow you’re not switching between one window for your IDE, another for management, another for making notes, another for logging ToDo tasks and time spent on each task and there is a great, supportive community out there.\nOn the flip side there is a big learning curve and that can be overwhelming, particularly as you need to learn some basic Emacs LISP to get going. But I prefer to view it as lots of small hills to overcome, I never set out to do half the things I use Emacs for, I just wanted something to write Stata scripts in other than their GUI and there was Emacs Speaks Statistics which I still use to this day for working with R code rather than RStudio.\nPerhaps the biggest hazard is that of the rabbit holes you can fall down customising things, but you just need discipline to keep that in check."
+    "text": "Emacs is an operating system\n\n\nPros\n\nThere is a package for almost everything.\nIf not, write one.\nHighly customise-able (Emacs LISP).\nTools work together\nSupportive community.\n\n\nCons\n\nLearning curve.\nOverwhelming.\nLearn some basic Emacs LISP.\n🐰 holes.\n\n\n\n\nThere are pros and cons to everything, there is a package for almost everything, if not you can (potentially) write one. It gives you a highly customised environment that works they way you want it to, as I hope to have demonstrated its how the individual tools work together to improve and smooth the workflow you’re not switching between one window for your IDE, another for management, another for making notes, another for logging ToDo tasks and time spent on each task and there is a great, supportive community out there.\nOn the flip side there is a big learning curve and that can be overwhelming, particularly as you need to learn some basic Emacs LISP to get going. But I prefer to view it as lots of small hills to overcome, I never set out to do half the things I use Emacs for, I just wanted something to write Stata scripts in other than their GUI and there was Emacs Speaks Statistics which I still use to this day for working with R code rather than RStudio.\nPerhaps the biggest hazard is that of the rabbit holes you can fall down customising things, but you just need discipline to keep that in check."
   },
   {
     "objectID": "index.html#links",
     "href": "index.html#links",
     "title": "Why Emacs?",
     "section": "Links",
-    "text": "Links\n\n\n\nOfficial Pages\n\nEmacs\nEmacsdocs.org\nLSP Mode\nMagit\nOrgmode\nOrgRoam\nWorld of Org\n\n\n\n\nUseful Resources\n\nEmacs StackExchange\n/r/emacs\nemacs.ch (Mastodon instance)\n\n\n\n\nAdvocacy\n\nSystemCrafters\nProtesilaos Stavrou\nMastering Emacs\nLucid Manager - Emacs\nMy Emacs Config\n\n\n\n\n\nThere are tons of resources out there for learning Emacs, I’ve listed here some of the official documentation for some of the packages I’ve covered today and a bunch of useful resources for when you’re scratching your head such as the Emacs StackExchange and /r/emacs. If you use Mastodon there is the emacs.ch server and you’ll find if you tag questions with #emacs you get a lot of useful responses.\nI’ve also listed a number of advocacy resources that demonstrate how to do various things in Emacs and last of all is a link to my Emacs configuration repository. I borrow and use others configuration examples all the time and its a great way of learning."
+    "text": "Links\n\n\nOfficial Pages\n\nEmacs\nEmacsdocs.org\nLSP Mode\nMagit\nOrgmode\nOrgRoam\nWorld of Org\n\n\nUseful Resources\n\nEmacs StackExchange\n/r/emacs\nemacs.ch (Mastodon instance)\n\n\nAdvocacy\n\nSystemCrafters\nProtesilaos Stavrou\nMastering Emacs\nLucid Manager - Emacs\nMy Emacs Config\n\n\n\n\nThere are tons of resources out there for learning Emacs, I’ve listed here some of the official documentation for some of the packages I’ve covered today and a bunch of useful resources for when you’re scratching your head such as the Emacs StackExchange and /r/emacs. If you use Mastodon there is the emacs.ch server and you’ll find if you tag questions with #emacs you get a lot of useful responses.\nI’ve also listed a number of advocacy resources that demonstrate how to do various things in Emacs and last of all is a link to my Emacs configuration repository. I borrow and use others configuration examples all the time and its a great way of learning."
   }
 ]
